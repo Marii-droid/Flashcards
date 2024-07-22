@@ -1,0 +1,95 @@
+html {
+    .oswald-<script> {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200;
+    font-style: normal;
+    }
+}
+
+body {
+    background: #D26C6C;
+    background-image: linear-gradient(135deg, #D26C6C, #17CDCC);
+    background-size: 2000px 2000px;
+    margin: 50px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 70px
+}
+
+.container{
+    /*display: grid;
+    grid-template-columns:  33% 33% 33%;
+    grid-auto-rows: 33% 33% 33%;
+    gap: 20px 20px;
+    place-items: center center;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+    justify-content: center;*/
+
+   width: 630px;
+    height: 630px;
+    display: flex;
+    flex-wrap: wrap row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border-radius: 20px;
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+}
+
+.front {
+    background: #D26C6C;
+    color: #A21147;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: #A21147;
+    color: #D26C6C;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.container {
+    perspective: 1000px;
+}
